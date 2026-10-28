@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#07080b">
+    <meta name="description" content="Uma experiência ficcional de investigação e horror psicológico. Examine evidências, investigue o terminal e descubra o segredo do Arquivo 013.">
+    <meta name="color-scheme" content="dark">
+    <title>A ÚLTIMA SESSÃO — Arquivo 013</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+
+<body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="app">
+        <header class="topbar">
+            <div class="brand">
+                <div class="sigil">013</div>
+                <div>
+                    <div class="brandname">NEXUS // INCIDENT RESPONSE</div>
+                    <div class="brandsub">DIVISÃO DE ANOMALIAS DIGITAIS</div>
+                </div>
+            </div>
+            <div class="statusbar"><span class="live" role="status">SISTEMA ATIVO</span><span class="timer-chip">TEMPO <b id="sessionClock">00:00</b></span><span class="hide-sm">BUILD 0.13.8</span><span id="clock">--:--:--</span></div>
+        </header>
+        <section class="hero" id="hero">
+            <div>
+                <div class="eyebrow">ARQUIVO CLASSIFICADO // 31 OUT</div>
+                <h1>A ÚLTIMA<span>SESSÃO.</span></h1>
+                <p class="intro">Às <strong>03:13</strong>, todos os terminais do laboratório 013 desligaram ao mesmo
+                    tempo. Um deles voltou a ligar sozinho. O sistema está transmitindo um pedido de ajuda — mas o
+                    registro oficial afirma que <strong>o laboratório nunca existiu</strong>.</p>
+            </div>
+            <div class="hero-art">
+                <div class="orbit"></div>
+                <div class="orbit o2"></div>
+                <div class="eye"></div>
+                <div class="art-corner">● REC // 03:13:00</div>
+                <div class="art-label"><span>CAM_013 // NO SIGNAL</span><span>OBSERVADOR DETECTADO</span></div>
+            </div>
+        </section>
+        <section class="workspace">
+            <aside class="sidebar">
+                <div class="sidehead">NAVEGAÇÃO DO CASO</div>
+                <div class="navitem active" id="nav-investigation"><span class="num">01</span> INVESTIGAÇÃO <span
+                        id="nav1" class="nav-status">●</span></div>
+                <div class="navitem" id="nav-terminal"><span class="num">02</span> TERMINAL <span id="nav2" class="nav-status">○</span></div>
+                <div class="navitem" id="nav-debrief"><span class="num">03</span> RELATÓRIO <span id="nav3" class="nav-status">○</span></div>
+                <div class="sidefoot">INVESTIGADOR: <b id="sidePlayerName">NÃO IDENTIFICADO</b><br>NÍVEL DE ACESSO: <b>RESTRITO</b><br>CONEXÃO: <b>LOCAL / SEGURA</b><br>OPERADOR: <b
+                        id="operator">DESCONHECIDO</b><br><br><span class="warning-label">AVISO:</span> não confie em
+                    tudo o que o sistema mostrar.</div>
+            </aside>
+            <main class="mainpanel">
+                <div class="panelhead"><span id="paneltitle">CASO 013 / EVIDÊNCIAS RECUPERADAS</span><span class="right"
+                        id="panelstate">● AGUARDANDO OPERADOR</span></div>
+                <div class="panelbody" id="investigation">
+                    <div class="sectiontop">
+                        <div>
+                            <div class="kicker">FASE 01 // COLETA DE EVIDÊNCIAS</div>
+                            <h2 class="sectiontitle">O que aconteceu às 03:13?</h2>
+                            <p class="sub">Três fragmentos foram recuperados do terminal. Examine cada evidência com
+                                atenção. Os detalhes aparentemente irrelevantes formam a chave para acessar o arquivo
+                                corrompido.</p>
+                        </div>
+                        <div class="badge">3 ARQUIVOS RECUPERADOS</div>
+                    </div>
+                    <div class="cards"><button class="filecard" data-file="log">
+                            <div class="fileicon">≋</div>
+                            <div class="filetitle">system_log.txt</div>
+                            <div class="filedesc">Registro de eventos dos minutos anteriores à falha.</div>
+                            <div class="filefoot"><span>TXT // 2.4 KB</span><span id="seen-log">NÃO LIDO ↗</span></div>
+                        </button><button class="filecard" data-file="audio">
+                            <div class="fileicon">♫</div>
+                            <div class="filetitle">voice_fragment.wav</div>
+                            <div class="filedesc">Transcrição completa e gravação opcional com interferência de rádio.</div>
+                            <div class="filefoot"><span>AUD // CORROMPIDO</span><span id="seen-audio">NÃO LIDO ↗</span>
+                            </div>
+                        </button><button class="filecard" data-file="image">
+                            <div class="fileicon">▧</div>
+                            <div class="filetitle">cam_013_frame.dat</div>
+                            <div class="filedesc">Último quadro da câmera antes da desconexão.</div>
+                            <div class="filefoot"><span>IMG // 03:13:00</span><span id="seen-image">NÃO LIDO ↗</span>
+                            </div>
+                        </button></div>
+                    <div class="connection-box" id="connectionBox">
+                        <div class="connection-heading"><span>◈</span> CORRELAÇÃO DE PISTAS</div>
+                        <p>O registro marca <strong>03:13:00</strong>, a gravação repete o horário e a câmera detecta <strong>duas figuras</strong> apesar de existir apenas um funcionário oficial.</p>
+                        <div class="connection-status" id="connectionStatus">ANÁLISE PENDENTE // EXAMINE OS TRÊS ARQUIVOS</div>
+                    </div>
+                    <div class="bottomrow">
+                        <div class="progresswrap">
+                            <div class="progresslabel"><span>EVIDÊNCIAS ANALISADAS</span><span id="progressText">0 /
+                                    3</span></div>
+                            <div class="progress" role="progressbar" aria-label="Evidências analisadas" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><i id="progressBar"></i></div>
+                        </div>
+                        <div class="btnrow"><button class="btn" id="hintBtn">PEDIR DICA</button><button
+                                class="btn primary" id="toTerminal" disabled>ACESSAR TERMINAL →</button></div>
+                    </div>
+                </div>
+                <div class="panelbody hidden" id="terminal">
+                    <div class="sectiontop">
+                        <div>
+                            <div class="kicker">FASE 02 // INTERFACE DE CONTENÇÃO</div>
+                            <h2 class="sectiontitle">Terminal isolado</h2>
+                            <p class="sub">As evidências apontam para um código de quatro dígitos. Insira o código no
+                                terminal para desbloquear o arquivo oculto. Você também pode testar os comandos
+                                disponíveis.</p>
+                        </div>
+                        <div class="badge">SHELL // LIMITADO</div>
+                    </div>
+                    <div class="terminal" id="termout">
+                        <div class="termline">NEXUS CONTAINMENT SHELL v0.13.7</div>
+                        <div class="termline">Conexão local estabelecida.</div>
+                        <div class="termline warn">AVISO: integridade do arquivo de memória em 17%.</div>
+                        <div class="termline">Digite <span class="good">help</span> para listar comandos.</div>
+                    </div>
+                    <form class="commandrow" id="commandForm"><span class="prompt">nexus:~$</span><input
+                            id="commandInput" autocomplete="off" spellcheck="false" placeholder="digite um comando..."
+                            aria-label="Comando do terminal"><button type="submit">EXECUTAR ↵</button></form>
+                    <div class="puzzlebox"><label for="codeInput">CÓDIGO DE DESBLOQUEIO // 4 DÍGITOS</label>
+                        <div class="answerrow"><input id="codeInput" inputmode="numeric" maxlength="4"
+                                placeholder="_ _ _ _" aria-label="Código de quatro dígitos"><button class="btn primary"
+                                id="unlockBtn">DESBLOQUEAR</button></div>
+                        <div class="feedback" id="codeFeedback" aria-live="polite"></div>
+                    </div>
+                    <div class="btnrow"><button class="btn" id="backEvidence">← VOLTAR ÀS EVIDÊNCIAS</button></div>
+                </div>
+                <div class="panelbody hidden" id="debrief">
+                    <div class="finale">
+                        <div class="finaleinner">
+                            <div class="eyebrow">CONEXÃO RESTABELECIDA // OU NÃO</div>
+                            <h2 id="finalTitle">VOCÊ NÃO<br>ESTAVA <em>SOZINHO.</em></h2>
+                            <p id="finalText">O arquivo foi aberto. Mas o que está lá dentro muda tudo.</p>
+                            <div class="btnrow final-actions"><button
+                                    class="btn primary" id="showReport">VER RELATÓRIO DO CASO</button><button
+                                    class="btn" id="restartBtn">REINICIAR EXPERIÊNCIA</button></div>
+                        </div>
+                    </div>
+                    <div id="reportArea" class="hidden">
+                        <div class="sectiontop report-top">
+                            <div>
+                                <div class="kicker">PÓS-INCIDENTE // RELATÓRIO TÉCNICO</div>
+                                <h2 class="sectiontitle">Relatório de sessão</h2>
+                                <p class="sub">Resumo desta execução. Nenhuma informação pessoal foi coletada.</p>
+                            </div>
+                            <div class="badge">SIMULAÇÃO LOCAL</div>
+                        </div>
+                        <div class="metricrow">
+                            <div class="metric"><b id="metricTime">00:00</b><span>TEMPO DE SESSÃO</span></div>
+                            <div class="metric"><b id="metricClues">0/3</b><span>EVIDÊNCIAS ANALISADAS</span></div>
+                            <div class="metric"><b id="metricCommands">0</b><span>COMANDOS EXECUTADOS</span></div>
+                        </div>
+                        <section class="leaderboard" aria-labelledby="leaderboardTitle">
+                            <div class="leaderboard-head"><div><div class="kicker">ARQUIVO 013 // HALL DOS INVESTIGADORES</div><h3 id="leaderboardTitle">Ranking de tempo</h3></div><span class="badge">TOP 5</span></div>
+                            <p class="sub">Somente casos concluídos entram na classificação. Os recordes ficam salvos neste navegador.</p>
+                            <div id="leaderboardRows" class="leaderboard-rows"><div class="empty-rank">Nenhum investigador classificado. Seja o primeiro.</div></div>
+                        </section>
+                        <div class="doc">INCIDENTE: ARQUIVO 013
+                            STATUS: <span class="good">SESSÃO CONCLUÍDA</span>
+                            MÉTODO: análise de evidências + dedução + validação de código
+                            SEGURANÇA: execução inteiramente local no navegador
+
+                            NOTA DO ANALISTA:
+                            A interface foi construída como uma narrativa interativa. O progresso é controlado por
+                            estado, as respostas são validadas localmente e os eventos da sessão são contabilizados sem
+                            enviar dados para servidores.</div>
+                        <div class="btnrow report-actions"><button class="btn primary" id="restartBtn2">NOVA
+                                SESSÃO</button><button class="btn" id="printBtn">IMPRIMIR RELATÓRIO</button></div>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <footer class="footer"><span>NEXUS LABS © 2026 // SIMULAÇÃO FICCIONAL</span><span>ESTA EXPERIÊNCIA NÃO ACESSA
+                ARQUIVOS DO DISPOSITIVO</span><button id="soundBtn">SOM: DESLIGADO</button><button
+                id="fullscreenBtn">TELA CHEIA ⛶</button><button id="resetBtn">RESET ADMIN</button></footer>
+    </div>
+    <div class="startback" id="startOverlay" role="dialog" aria-modal="true" aria-labelledby="startTitle">
+        <section class="start-card">
+            <div class="start-sigil">013</div><div class="eyebrow">ACESSO AO ARQUIVO // RESTRITO</div>
+            <h2 id="startTitle">IDENTIFIQUE-SE,<br><em>INVESTIGADOR.</em></h2>
+            <p>O sistema registrará seu tempo de investigação. Cada segundo conta.</p>
+            <form id="startForm"><label for="playerName">NOME OU CODINOME</label><input id="playerName" maxlength="24" autocomplete="nickname" placeholder="Ex.: Operador Zero" required><button class="btn primary start-button" type="submit">INICIAR INVESTIGAÇÃO →</button></form>
+            <div class="start-foot">ARQUIVO 013 // TODAS AS ATIVIDADES SÃO MONITORADAS</div>
+        </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="modalback hidden" id="modal" aria-hidden="true">
+        <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCode">
+            <div class="modalhead"><span id="modalCode">EVIDÊNCIA // ARQUIVO</span><button class="close"
+                    id="closeModal">FECHAR ×</button></div>
+            <div class="modalbody" id="modalContent"></div>
+        </section>
+    </div>
+    <script type="module" src="/src/scripts/main.js"></script>
+</body>
+
+</html>

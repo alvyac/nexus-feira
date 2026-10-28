@@ -1,0 +1,21 @@
+{
+  "name": "a-ultima-sessao-arquivo-013",
+  "private": true,
+  "version": "1.3.0",
+  "description": "Experiência de horror psicológico com gravação ficcional local, áudio opcional de evidência e interferências de rádio.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "eslint": "^9.25.1",
+    "prettier": "^3.5.3",
+    "vite": "^6.4.1"
+  }
+}

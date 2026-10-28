@@ -1,0 +1,129 @@
+.metric span {
+            color: #7d8490;
+            font: 9px var(--mono);
+            letter-spacing: .08em
+        }
+
+
+@media(max-width:850px) {
+            .hero {
+                grid-template-columns: 1fr
+            }
+
+            .hero-art {
+                min-height: 200px
+            }
+
+            .workspace {
+                grid-template-columns: 1fr
+            }
+
+            .sidebar {
+                display: none
+            }
+
+            .cards {
+                grid-template-columns: 1fr
+            }
+
+            .filecard {
+                min-height: 130px
+            }
+
+            .fileicon {
+                margin-bottom: 10px
+            }
+
+            .bottomrow {
+                align-items: stretch;
+                flex-direction: column
+            }
+
+            .progresswrap {
+                max-width: none
+            }
+
+            .statusbar .hide-sm {
+                display: none
+            }
+        }
+
+
+@media(max-width:520px) {
+            .app {
+                padding: 14px 12px 24px
+            }
+
+            .statusbar {
+                gap: 8px;
+                font-size: 9px
+            }
+
+            .brandsub {
+                font-size: 8px
+            }
+
+            .brandname {
+                font-size: 10px
+            }
+
+            .hero {
+                padding-top: 42px
+            }
+
+            .cluegrid {
+                grid-template-columns: 1fr
+            }
+
+            .sectiontop {
+                flex-direction: column
+            }
+
+            .badge {
+                align-self: flex-start
+            }
+
+            .panelhead {
+                padding: 14px
+            }
+
+            .panelbody {
+                padding: 17px
+            }
+
+            .metricrow {
+                grid-template-columns: 1fr
+            }
+
+            .answerrow {
+                flex-direction: column
+            }
+        }
+
+
+/* Utilitários sem estilos inline no HTML */
+.nav-status {
+    margin-left: auto;
+}
+
+
+.warning-label {
+    color: #8f3546;
+}
+
+
+.final-actions {
+    justify-content: center;
+    margin-top: 24px;
+}
+
+
+.report-top {
+    margin-top: 25px;
+}
+
+
+.report-actions {
+    margin-top: 18px;
+}
+

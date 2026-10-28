@@ -1,0 +1,234 @@
+.filecard {
+            background: linear-gradient(145deg, #11141b, #0b0d12);
+            border: 1px solid #292e39;
+            padding: 17px;
+            min-height: 174px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            color: var(--text);
+            transition: .2s;
+            position: relative;
+            overflow: hidden
+        }
+
+
+.filecard:hover {
+            border-color: #8c2a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px #0005
+        }
+
+
+.filecard.opened {
+            border-color: #3a5d59
+        }
+
+
+.fileicon {
+            width: 38px;
+            height: 38px;
+            border: 1px solid #343a47;
+            display: grid;
+            place-items: center;
+            color: var(--cyan);
+            font: 16px var(--mono);
+            margin-bottom: 19px
+        }
+
+
+.filecard:nth-child(2) .fileicon {
+            color: var(--amber)
+        }
+
+
+.filecard:nth-child(3) .fileicon {
+            color: var(--red)
+        }
+
+
+.filetitle {
+            font: 12px var(--mono);
+            margin-bottom: 7px
+        }
+
+
+.filedesc {
+            color: #7e8592;
+            font-size: 11px;
+            line-height: 1.5
+        }
+
+
+.filefoot {
+            margin-top: auto;
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            color: #555d69;
+            font: 9px var(--mono);
+            letter-spacing: .08em
+        }
+
+
+.filefoot span:last-child {
+            color: var(--cyan)
+        }
+
+
+.bottomrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 18px;
+            border-top: 1px solid var(--line)
+        }
+
+
+.progresswrap {
+            flex: 1;
+            max-width: 280px
+        }
+
+
+.progresslabel {
+            display: flex;
+            justify-content: space-between;
+            color: #777e8b;
+            font: 9px var(--mono);
+            margin-bottom: 8px
+        }
+
+
+.progress {
+            height: 3px;
+            background: #252a34;
+            overflow: hidden
+        }
+
+
+.progress i {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: var(--red);
+            transition: width .3s
+        }
+
+
+.btn {
+            border: 1px solid #343a46;
+            background: #12151c;
+            color: #d9dce4;
+            padding: 12px 16px;
+            font: 10px var(--mono);
+            letter-spacing: .09em;
+            text-transform: uppercase;
+            transition: .18s
+        }
+
+
+.btn:hover {
+            border-color: #a82d40;
+            background: #1a1117
+        }
+
+
+.btn.primary {
+            background: var(--red);
+            border-color: var(--red);
+            color: #13080b;
+            font-weight: 500
+        }
+
+
+.btn.primary:hover {
+            background: #ff6375
+        }
+
+
+.btn:disabled {
+            opacity: .35;
+            cursor: not-allowed
+        }
+
+
+.btnrow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px
+        }
+
+
+.terminal {
+            background: #05070a;
+            border: 1px solid #262c34;
+            padding: 17px;
+            min-height: 190px;
+            font: 12px/1.8 var(--mono);
+            color: #b5c6c5;
+            position: relative
+        }
+
+
+.terminal:before {
+            content: 'SESSION_TERMINAL // READ-ONLY';
+            display: block;
+            color: #606a75;
+            font-size: 9px;
+            letter-spacing: .12em;
+            border-bottom: 1px solid #20252c;
+            padding-bottom: 10px;
+            margin-bottom: 12px
+        }
+
+
+.termline {
+            white-space: pre-wrap;
+            word-break: break-word
+        }
+
+
+.termline .bad {
+            color: var(--red)
+        }
+
+
+.termline .good {
+            color: var(--cyan)
+        }
+
+
+.termline .warn {
+            color: var(--amber)
+        }
+
+
+.commandrow {
+            display: flex;
+            margin-top: 10px;
+            border: 1px solid #2b303a;
+            background: #080a0e
+        }
+
+
+.prompt {
+            padding: 13px 12px;
+            color: var(--red);
+            font: 12px var(--mono)
+        }
+
+
+.commandrow input {
+            background: transparent;
+            color: #e5e7eb;
+            border: 0;
+            outline: 0;
+            min-width: 0;
+            flex: 1;
+            font: 12px var(--mono);
+            padding: 12px 0
+        }
+

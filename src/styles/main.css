@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import './parts/01-shell-and-hero.css';
+@import './parts/02-workspace.css';
+@import './parts/03-investigation.css';
+@import './parts/04-terminal-and-finale.css';
+@import './parts/05-overlays-and-report.css';
+@import './parts/06-responsive-and-utilities.css';
+@import './parts/07-new-features.css';

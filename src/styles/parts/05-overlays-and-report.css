@@ -1,0 +1,215 @@
+.finale p {
+            color: #b3aab2;
+            line-height: 1.8;
+            font-size: 14px
+        }
+
+
+.hidden {
+            display: none !important
+        }
+
+
+.toast {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translate(-50%, 20px);
+            opacity: 0;
+            transition: .25s;
+            z-index: 50;
+            background: #17131a;
+            border: 1px solid #63303c;
+            padding: 12px 16px;
+            font: 11px var(--mono);
+            color: #f3dfe4;
+            max-width: 90vw;
+            text-align: center
+        }
+
+
+.toast.show {
+            opacity: 1;
+            transform: translate(-50%, 0)
+        }
+
+
+.modalback {
+            position: fixed;
+            inset: 0;
+            background: #000b;
+            z-index: 60;
+            display: grid;
+            place-items: center;
+            padding: 18px;
+            backdrop-filter: blur(8px)
+        }
+
+
+.modal {
+            width: min(660px, 100%);
+            max-height: 85vh;
+            overflow: auto;
+            background: #0c0e13;
+            border: 1px solid #57303a;
+            box-shadow: 0 20px 90px #000b
+        }
+
+
+.modalhead {
+            padding: 16px 19px;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            color: #a8aeba;
+            font: 10px var(--mono);
+            letter-spacing: .1em
+        }
+
+
+.modalbody {
+            padding: clamp(20px, 4vw, 32px)
+        }
+
+
+.modalbody h3 {
+            font-size: 28px;
+            letter-spacing: -.04em;
+            margin: 8px 0 14px
+        }
+
+
+.modalbody p {
+            color: #aab0bc;
+            line-height: 1.75;
+            font-size: 14px
+        }
+
+
+.doc {
+            background: #080a0e;
+            border: 1px solid #252b35;
+            padding: 18px;
+            font: 12px/1.8 var(--mono);
+            color: #a8b8b4;
+            white-space: pre-wrap
+        }
+
+
+.doc .red {
+            color: var(--red)
+        }
+
+
+.doc .amber {
+            color: var(--amber)
+        }
+
+
+.close {
+            background: transparent;
+            color: #aaa;
+            border: 1px solid #333;
+            padding: 6px 10px;
+            font: 10px var(--mono)
+        }
+
+
+.footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            color: #515864;
+            font: 9px var(--mono);
+            letter-spacing: .1em;
+            padding-top: 20px
+        }
+
+
+.footer button {
+            background: none;
+            border: 0;
+            color: #747c89;
+            font: inherit;
+            text-decoration: underline
+        }
+
+
+.glitch {
+            animation: glitch .18s steps(2) 3
+        }
+
+
+@keyframes glitch {
+            0% {
+                transform: translate(0)
+            }
+
+            25% {
+                transform: translate(-3px, 1px);
+                filter: hue-rotate(80deg)
+            }
+
+            50% {
+                transform: translate(3px, -1px)
+            }
+
+            75% {
+                transform: translate(-1px, -2px);
+                filter: contrast(1.8)
+            }
+
+            100% {
+                transform: translate(0)
+            }
+        }
+
+
+.timer {
+            font: 11px var(--mono);
+            color: var(--amber)
+        }
+
+
+.timer.urgent {
+            color: var(--red);
+            animation: pulse .6s infinite
+        }
+
+
+.modalimage {
+            display: grid;
+            place-items: center;
+            min-height: 170px;
+            background: radial-gradient(ellipse, #33131e, #090a0f);
+            border: 1px solid #31232b;
+            margin: 14px 0;
+            color: var(--red);
+            font: 40px var(--mono);
+            letter-spacing: .15em
+        }
+
+
+.metricrow {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 18px 0
+        }
+
+
+.metric {
+            border: 1px solid #292e39;
+            padding: 14px;
+            background: #0c0f14
+        }
+
+
+.metric b {
+            display: block;
+            font: 24px var(--mono);
+            color: var(--cyan);
+            margin-bottom: 6px
+        }
+
